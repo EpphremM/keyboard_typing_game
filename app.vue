@@ -9,7 +9,7 @@
       </div>
       <h2>{{ rand }}</h2>
 
-      <!-- <h2 v-if="!isTestFinished" class="mt-4 text-lg">{{ randomText }}</h2> -->
+      <h2 v-if="!isTestFinished" class="mt-4 text-lg">{{ randomText }}</h2>
       <h2 class="mt-2">Time Left: {{ time }}s | WPM: {{ wordsPerMinute }}</h2>
 
       <div v-if="!isTestFinished" class="flex flex-wrap justify-center mt-4">
@@ -46,7 +46,7 @@ const typedKeys = ref("");
 const minute = ref(0);
 const secondValue = ref(0);
 const index = ref(0);
-const time = ref(180); 
+const time = ref(60); 
 const isTypingStart = ref(false);
 const isTestFinished = ref(false);
 const correctCount = ref(0);
@@ -92,7 +92,7 @@ const startTest = () => {
   incorrectCount.value = 0;
   index.value = 0;
   startTime.value = performance.now();
-  time.value = 180;
+  time.value = 60;
 
   const intervalId = setInterval(() => {
     if (time.value <= 0 || index.value >= randomText.value.length) {
