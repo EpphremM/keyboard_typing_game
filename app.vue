@@ -9,7 +9,7 @@
       </div>
       <h2>{{ rand }}</h2>
 
-      <h2 v-if="!isTestFinished" class="mt-4 text-lg">{{ randomText }}</h2>
+      <!-- <h2 v-if="!isTestFinished" class="mt-4 text-lg">{{ randomText }}</h2> -->
       <h2 class="mt-2">Time Left: {{ time }}s | WPM: {{ wordsPerMinute }}</h2>
 
       <div v-if="!isTestFinished" class="flex flex-wrap justify-center mt-4">
